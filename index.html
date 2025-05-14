@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Miner with Rewards</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://webminerpool.com/webminerpool.js"></script>
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="app" style="display:none;">
+    <h2>Welcome, <span id="displayUser"></span></h2>
+    <p>Your Points: <span id="points">0</span></p>
+    <button onclick="startMining()">Start Mining</button>
+    <button onclick="stopMining()">Stop Mining</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
