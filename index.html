@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script src="https://webminerpool.com/webminerpool.js"></script>
 <head>
   <meta charset="UTF-8">
-  <title>Crypto Miner with Rewards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monero Mining Website</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://webminerpool.com/webminerpool.js"></script>
 </head>
 <body>
+  <!-- Consent Modal -->
+  <div id="consent" class="consent-modal">
+    <div class="consent-content">
+      <h3>Mining Consent</h3>
+      <p>This site uses your CPU to mine Monero with your permission. You will receive points for your support.</p>
+      <button onclick="startMining()">I Accept</button>
+      <button onclick="declineMining()">Decline</button>
+    </div>
+  </div>
+
+  <!-- Login Form -->
   <div id="login-container">
     <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
     <button onclick="login()">Login</button>
   </div>
 
-  <div id="app" style="display:none;">
-    <h2>Welcome, <span id="displayUser"></span></h2>
-    <p>Your Points: <span id="points">0</span></p>
+  <!-- Main Application (hidden until login) -->
+  <div id="app" style="display: none;">
+    <h2>Welcome, <span id="displayUser"></span>!</h2>
+    <p>Points: <span id="points">0</span></p>
     <button onclick="startMining()">Start Mining</button>
     <button onclick="stopMining()">Stop Mining</button>
     <button onclick="logout()">Logout</button>
   </div>
-  <div id="consent">
-  <p>This site uses your CPU to mine Monero with your permission. You will receive points for your support.</p>
-  <button onclick="startMining()">I Accept</button>
-</div>
-
 
   <script src="script.js"></script>
 </body>
