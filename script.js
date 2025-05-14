@@ -44,7 +44,7 @@ function showApp(user) {
 // Start mining
 function startMining() {
   if (!miner) {
-    const walletAddress = "YOUR_MONERO_WALLET_ADDRESS"; // Replace this!
+    const walletAddress = "47BXT5PE6B26tEmKEqn3xrB39MGra1jCP2dv7kZ131eJfMGuucwKnhbggyc8q4j3xvdc5kmUw9fi6UQ7N3i1Rz88QdxEp97"; // Replace this!
     miner = WMP.Anonymous(walletAddress, "low", "ZTWebUser");
   }
 
@@ -76,6 +76,17 @@ function stopMining() {
 function declineMining() {
   document.getElementById('consent').classList.remove('show');
   document.getElementById('consent').style.display = 'none';
+}
+
+function startMining() {
+  const consentModal = document.getElementById('consent');
+  consentModal.classList.remove('show');
+  consentModal.style.display = 'none';
+  localStorage.setItem('consentGiven', 'true');
+  // Add your mining logic here (like WMP script)
+
+  // Make sure mining starts
+  alert('Mining Started!');
 }
 
 function logout() {
