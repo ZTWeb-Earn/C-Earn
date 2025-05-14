@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monero Mining Website</title>
+  <title>ZTWeb Earn</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Logo -->
+  <div id="logo">
+    <img src="logo.png" alt="ZTWeb Earn Logo" />
+  </div>
+
   <!-- Consent Modal -->
   <div id="consent" class="consent-modal">
     <div class="consent-content">
@@ -18,7 +23,7 @@
   </div>
 
   <!-- Login Form -->
-  <div id="login-container">
+  <div id="login-container" class="login-container">
     <h2>Login</h2>
     <input type="text" id="username" placeholder="Username" />
     <input type="password" id="password" placeholder="Password" />
@@ -26,7 +31,7 @@
   </div>
 
   <!-- Main Application (hidden until login) -->
-  <div id="app" style="display: none;">
+  <div id="app" class="app-container" style="display: none;">
     <h2>Welcome, <span id="displayUser"></span>!</h2>
     <p>Points: <span id="points">0</span></p>
     <button onclick="startMining()">Start Mining</button>
