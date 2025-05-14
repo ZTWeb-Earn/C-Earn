@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZTWeb Earn</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://webminepool.com/lib/base.js"></script>
 </head>
 <body>
   <!-- Logo -->
@@ -30,13 +31,19 @@
     <button onclick="login()">Login</button>
   </div>
 
-  <!-- Main Application (hidden until login) -->
+  <!-- Main Application -->
   <div id="app" class="app-container" style="display: none;">
     <h2>Welcome, <span id="displayUser"></span>!</h2>
     <p>Points: <span id="points">0</span></p>
     <button onclick="startMining()">Start Mining</button>
     <button onclick="stopMining()">Stop Mining</button>
     <button onclick="logout()">Logout</button>
+
+    <!-- Mining Animation -->
+    <div id="miningStatus" style="display: none;">
+      <img src="mining.gif" alt="Mining..." class="mining-animation">
+      <p>Mining in progress...</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
