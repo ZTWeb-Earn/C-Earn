@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZTWeb Earn</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://webminepool.com/lib/base.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTWeb Earn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Logo -->
-  <div id="logo">
-    <img src="logo.png" alt="ZTWeb Earn Logo" />
-  </div>
-
-  <!-- Consent Modal -->
-  <div id="consent" class="consent-modal">
-    <div class="consent-content">
-      <h3>Mining Consent</h3>
-      <p>This site uses your CPU to mine Monero with your permission. You will receive points for your support.</p>
-      <button onclick="startMining()">I Accept</button>
-      <button onclick="declineMining()">Decline</button>
+    <!-- Logo -->
+    <div id="logo">
+        <img src="logo.png" alt="ZTWeb Earn Logo" />
     </div>
-  </div>
 
-  <!-- Login Form -->
-  <div id="login-container" class="login-container">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-  </div>
-
-  <!-- Main Application -->
-  <div id="app" class="app-container" style="display: none;">
-    <h2>Welcome, <span id="displayUser"></span>!</h2>
-    <p>Points: <span id="points">0</span></p>
-    <button onclick="startMining()">Start Mining</button>
-    <button onclick="stopMining()">Stop Mining</button>
-    <button onclick="logout()">Logout</button>
-
-    <!-- Mining Animation -->
-    <div id="miningStatus" style="display: none;">
-      <img src="mining.gif" alt="Mining..." class="mining-animation">
-      <p>Mining in progress...</p>
+    <!-- Consent Modal -->
+    <div id="consent" class="consent-modal">
+        <div class="consent-content">
+            <h2>By using this website, you agree to mine cryptocurrency while you browse.</h2>
+            <p>Your device will participate in mining Monero (XMR), helping fund the platform. Please accept to continue.</p>
+            <button onclick="startMining()">I Accept</button>
+            <button onclick="declineMining()">Decline</button>
+        </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- Login Form -->
+    <div id="login-container" class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- App Container -->
+    <div id="app" class="app-container" style="display:none;">
+        <h3>Welcome, <span id="displayUser"></span></h3>
+        <p>Points: <span id="points">0</span></p>
+        <button onclick="startMining()">Start Mining</button>
+        <button onclick="stopMining()">Stop Mining</button>
+        <div id="miningStatus" style="display:none;">
+            <img src="mining.gif" alt="Mining..." class="mining-animation">
+            <p>Mining in progress...</p>
+        </div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
