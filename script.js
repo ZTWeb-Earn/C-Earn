@@ -51,6 +51,7 @@ function startMining() {
   miner.start();
   mining = true;
 
+  document.getElementById("miningGif").style.display = "inline";
   document.getElementById('miningStatus').style.display = 'block';
   alert('Mining Started!');
   
@@ -68,6 +69,7 @@ function stopMining() {
   mining = false;
   clearInterval(pointInterval);
 
+  document.getElementById("miningGif").style.display = "none";
   document.getElementById('miningStatus').style.display = 'none';
   alert('Mining Stopped!');
 }
